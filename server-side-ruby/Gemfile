@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+$:.unshift File.dirname(__FILE__)
+
+gem 'sinatra'
+gem 'sequel'
+gem 'sequel_pg'
+gem 'json'

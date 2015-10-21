@@ -1,0 +1,19 @@
+<h1>
+    <%= @tracker.name %> was here on
+    <span id="date"><%= @tracker.date ? @tracker.date : '…' %></span>
+</h1>
+<p>(last known position where <%= @tracker.name %> had a GPS signal, a network connection, and some battery power)</p>
+
+<h2>Google Maps version</h2>
+<div id="googlemap" style="width: 800px; height: 600px">
+    <div id="interlude" style="text-align: center; line-height: 600px; font-weight: bold; border: 1px dotted grey; background-color: #eee;">
+        Map currently unavailable.
+    </div>
+</div>
+
+<h2>OpenStreetMap + Leaflet.js version</h2>
+<div id="openstreetmap" style="width: 800px; height: 600px">
+    <div id="interlude" style="text-align: center; line-height: 600px; font-weight: bold; border: 1px dotted grey; background-color: #eee;">
+        Map currently unavailable.
+    </div>
+</div>
