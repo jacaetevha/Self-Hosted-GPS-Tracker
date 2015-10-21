@@ -20,6 +20,7 @@ get '/track/:name/?' do
   else
     @user.date = Time.now
   end
+  @user.save
   halt 200
 end
 
