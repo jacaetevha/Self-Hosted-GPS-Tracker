@@ -5,15 +5,22 @@ The database is assumed to be PostgreSQL, and is configured via the
 DATABASE_URL environment variable.
 
 This version of the server-side code allows you to track multiple users
-by allowing for a separate POST request that includes the user's name.
+by allowing for separate GET requests that include the user's name. The
+default user is the "I" user.
 
 To run this locally...
-  * < create your local database >
-  gem install bundler
-  bundle install
-  bundle exec rake db:migrate
-  bundle exec rackup config.ru --port <default:9292> --server <default:webrick> --host <default:localhost>
-  open http://host:port/
+  < create your local database >
+  $ gem install bundler
+  $ bundle install
+  $ bundle exec rake db:migrate
+  $ bundle exec rackup config.ru --port <default:9292> \
+    --server <default:webrick> \
+    --host <default:localhost>
+  $ open http://host:port/
 
-*Create your local database...
-- createdb self-hosted-gps-tracker-dev
+Create your local database...
+
+    $ createdb self-hosted-gps-tracker-dev
+
+When you install the Android app, point your tracking URL to http(s)://<your host>/track
+for the default "I" user, or http(s)://<your host>/track/<name> for a named user.
