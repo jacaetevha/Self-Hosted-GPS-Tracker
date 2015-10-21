@@ -6,7 +6,7 @@ Sequel.migration do
       Float :latitude
       Float :longitude
       Timestamp :date
-      Integer :utc_date
+      Float :utc_date
     end
   end
 
