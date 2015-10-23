@@ -12,8 +12,8 @@ end
 
 get '/track/:name/?' do
   @user = Tracker.find_or_create_by_name(params[:name])
-  @user.latitude = params[:lat]
-  @user.longitude = params[:lon]
+  @user.latitude = params[:lat].to_f
+  @user.longitude = params[:lon].to_f
   if params[:t]
     @user.utc_date = params[:t].to_f
     @user.date = Time.at @user.utc_date / 1000
